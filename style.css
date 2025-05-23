@@ -221,3 +221,25 @@ body {
   .logo-container { flex-direction: column; }
   .navbar a { display: block; margin: .5rem 0; }
 }
+.capa-livro {
+  max-width: 280px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.capa-livro img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.capa-livro figcaption {
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+.referencia-livro {
+  font-size: 0.85em;
+  text-align: center;
+  margin-top: -10px;
+}
