@@ -155,14 +155,46 @@
     <button class="seta direita" aria-label="Próximo" type="button">&#8594;</button>
   </div>
 </div>
-
     </section>
 
+     </section>
+
+    
     <section id="Narrativas" class="section">
-      <h2>Narrativas</h2>
-      <div class="galeria"><!-- mosaico --></div>
-    </section>
-  </main>
+  <h2>Narrativas</h2>
+
+  <div class="dupla-buttons">
+    <button class="btn-dupla" data-dupla="dupla1">Dupla 1</button>
+    <button class="btn-dupla" data-dupla="dupla2">Dupla 2</button>
+    <button class="btn-dupla" data-dupla="dupla3">Dupla 3</button>
+    <button class="btn-dupla" data-dupla="dupla4">Dupla 4</button>
+  </div>
+
+  <div class="listas-narrativas">
+    <ul class="lista-narrativas" id="dupla1" style="display:none;">
+      <li><button class="narrativa-btn" data-arquivo="narrativas/dupla1/narrativa1.pdf">Narrativa 1</button></li>
+    </ul>
+    <ul class="lista-narrativas" id="dupla2" style="display:none;">
+      <li><button class="narrativa-btn" data-arquivo="narrativas/dupla2/narrativa1.pdf">Narrativa 1</button></li>
+    </ul>
+    <ul class="lista-narrativas" id="dupla3" style="display:none;">
+      <li><button class="narrativa-btn" data-arquivo="narrativas/dupla3/narrativa1.pdf">Narrativa 1</button></li>
+      <li><button class="narrativa-btn" data-arquivo="narrativas/dupla3/narrativa2.pdf">Narrativa 2</button></li>
+    </ul>
+    <ul class="lista-narrativas" id="dupla4" style="display:none;">
+      <li><button class="narrativa-btn" data-arquivo="narrativas/dupla4/narrativa1.pdf">Narrativa 1</button></li>
+    </ul>
+  </div>
+
+  <!-- Aqui abriremos o pdf -->
+  <div id="pdf-container" style="display:none; margin-top:20px; text-align:center;">
+    <button id="fechar-pdf" style="margin-bottom:10px;">Fechar Narrativa</button>
+    <iframe id="pdf-viewer" src="" style="width:80%; height:600px; border:1px solid #ccc;"></iframe>
+  </div>
+</section>
+
+  </main>	
+
 
   <footer class="footer">
   <p>© 2025 PIBID Pedagogia - UESB | Desenvolvido por Luís Antônio</p>
@@ -181,7 +213,7 @@
     <button class="lightbox-seta dir" type="button">&#8594;</button>
   </div>
 
-  <script>
+ <script>
     document.querySelectorAll('.carrossel-container').forEach(container => {
       const items = Array.from(container.querySelectorAll('.carrossel-item'));
       let idx = 0;
@@ -262,5 +294,51 @@
   content.appendChild(clone);
 };
   </script>
+<script>
+  const btnDuplas = document.querySelectorAll('.btn-dupla');
+  const listas = document.querySelectorAll('.lista-narrativas');
+  const pdfContainer = document.getElementById('pdf-container');
+  const pdfViewer = document.getElementById('pdf-viewer');
+  const fecharPdfBtn = document.getElementById('fechar-pdf');
+
+  btnDuplas.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.dupla;
+      const listaAtiva = document.getElementById(id);
+
+      // Se já está visível, esconde
+      if (listaAtiva.style.display === 'block') {
+        listaAtiva.style.display = 'none';
+      } else {
+        // Esconde todas
+        listas.forEach(l => l.style.display = 'none');
+        // Mostra a lista clicada
+        listaAtiva.style.display = 'block';
+      }
+
+      // Fecha PDF quando muda de dupla
+      pdfContainer.style.display = 'none';
+      pdfViewer.src = '';
+    });
+  });
+
+  // Abrir PDF no iframe
+  document.querySelectorAll('.narrativa-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const arquivo = btn.dataset.arquivo;
+      pdfViewer.src = arquivo;
+      pdfContainer.style.display = 'block';
+      // Scroll para o pdf abrir bem visível (opcional)
+      pdfContainer.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Fechar PDF
+  fecharPdfBtn.addEventListener('click', () => {
+    pdfContainer.style.display = 'none';
+    pdfViewer.src = '';
+  });
+</script>
+
 </body>
-</html>
+</html>	
