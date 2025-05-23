@@ -243,3 +243,215 @@ body {
   text-align: center;
   margin-top: -10px;
 }
+figure.capa-livro {
+  max-width: 280px;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+}
+
+figure.capa-livro img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+figure.capa-livro figcaption {
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+figure.capa-livro .download-icone {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75em;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: background-color 0.2s;
+}
+
+figure.capa-livro .download-icone:hover {
+  background-color: #f0f0f0;
+}
+
+.referencia-livro {
+  font-size: 0.85em;
+figure.capa-livro {
+  max-width: 280px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+figure.capa-livro img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+figure.capa-livro .download-linha {
+  margin-top: 10px;
+}
+
+figure.capa-livro .download-icone {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75em;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: background-color 0.2s;
+}
+
+figure.capa-livro .download-icone:hover {
+  background-color: #f0f0f0;
+}
+
+figure.capa-livro figcaption {
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+.referencia-livro {
+  font-size: 0.85em;
+  text-align: center;
+  margin-top: -10px;
+}
+figure.capa-livro {
+  max-width: 280px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+figure.capa-livro img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+figure.capa-livro figcaption {
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+figure.capa-livro .download-linha {
+  margin-top: 6px;
+}
+
+figure.capa-livro .download-icone {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75em;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+figure.capa-livro .download-icone:hover {
+  background-color: #f0f0f0;
+}
+
+.referencia-livro {
+  font-size: 0.85em;
+  text-align: center;
+  margin-top: -10px;
+}
+figure.capa-livro {
+  max-width: 280px;
+  margin: 20px auto 10px auto;
+  text-align: center;
+}
+
+figure.capa-livro img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+figure.capa-livro figcaption {
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+.download-linha {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.download-icone {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75em;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+.download-icone:hover {
+  background-color: #f0f0f0;
+}
+
+.referencia-livro {
+  font-size: 0.85em;
+  text-align: center;
+  margin-top: -5px;
+}
+.download-linha {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+figure.capa-livro {
+  max-width: 280px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+figure.capa-livro img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+figure.capa-livro figcaption {
+  font-size: 0.9em;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+figure.capa-livro .download-icone {
+  display: inline-block;
+  margin-top: 6px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75em;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+figure.capa-livro .download-icone:hover {
+  background-color: #f0f0f0;
+}
+
+.referencia-livro {
+  font-size: 0.85em;
+  text-align: center;
+  margin-top: -5px;
+}
